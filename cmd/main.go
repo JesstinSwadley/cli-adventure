@@ -4,13 +4,16 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+
+	"github.com/JesstinSwadley/cli-adventure/internal"
 )
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 
-	fmt.Print("Please enter your username: ")
-	scanner.Scan()
-	username := scanner.Text()
-	fmt.Println(username)
+	var player internal.Player
+
+	p := player.NewPlayer(scanner)
+
+	fmt.Println(p.Name)
 }
