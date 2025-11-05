@@ -15,5 +15,10 @@ func main() {
 
 	p := player.NewPlayer(scanner)
 
+	var enemy internal.Enemy
+
+	enm := enemy.NewEnemy()
+
 	fmt.Println(p.Name)
+	fmt.Println(enm)
 }
