@@ -30,3 +30,15 @@ func (p Player) NewPlayer(scanner *bufio.Scanner) *Player {
 
 	return &player
 }
+
+func (p Player) Attack(scanner *bufio.Scanner) int {
+	fmt.Println("Do you want to attack yes/no?")
+	scanner.Scan()
+	response := scanner.Text()
+
+	if response == "no" {
+		return 0
+	} else {
+		return 5
+	}
+}
