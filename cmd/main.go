@@ -27,8 +27,14 @@ func main() {
 	enm.Health = enm.Health - int32(attack)
 
 	if enm.Health > 0 {
-		fmt.Println(enm.Name + " has survived your attack")
+		fmt.Println(enm.Name + " has survived your attack its health is " + strconv.Itoa(int(enm.Health)))
 	} else {
 		fmt.Println("You have defeated " + enm.Name)
 	}
+
+	enmAttack := enm.Attack()
+
+	p.Health = p.Health - int32(enmAttack)
+
+	fmt.Println(enm.Name + " has attacked you, your health is now " + strconv.Itoa(int(p.Health)))
 }

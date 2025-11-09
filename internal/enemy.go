@@ -24,3 +24,7 @@ func (enm Enemy) NewEnemy() *Enemy {
 
 	return &enemy
 }
+
+func (enm Enemy) Attack() int {
+	return 3
+}
