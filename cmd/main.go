@@ -45,6 +45,12 @@ func Turn(p *internal.Player, enm *internal.Enemy, scanner *bufio.Scanner) int {
 
 		fmt.Println(enm.Name + " has attacked you, your health is now " + strconv.Itoa(int(p.Health)))
 
+		fmt.Println("You attempt to heal")
+
+		p.Health += int32(p.Heal())
+
+		fmt.Println("You have healed your health is " + strconv.Itoa(int(p.Health)))
+
 		return 0
 	} else if p.Health <= 0 {
 		fmt.Println("You have been defeated")

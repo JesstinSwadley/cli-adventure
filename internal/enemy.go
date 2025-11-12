@@ -26,5 +26,7 @@ func (enm Enemy) NewEnemy() *Enemy {
 }
 
 func (enm Enemy) Attack() int {
-	return 3
+	damage := rand.Intn(5) + 1
+
+	return damage
 }

@@ -3,6 +3,7 @@ package internal
 import (
 	"bufio"
 	"fmt"
+	"math/rand"
 	"strconv"
 )
 
@@ -41,4 +42,11 @@ func (p Player) Attack(scanner *bufio.Scanner) int {
 	} else {
 		return 5
 	}
+}
+
+func (p Player) Heal() int {
+	fmt.Println("Healing")
+
+	healing := rand.Intn(5) + 1
+	return healing
 }
