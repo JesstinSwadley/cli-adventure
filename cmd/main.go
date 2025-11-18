@@ -22,6 +22,8 @@ func main() {
 
 	fmt.Println("Your opponent is " + enm.Name + " and its health is " + strconv.Itoa(int(enm.Health)))
 
+	internal.Actions(scanner)
+
 	// Use for loop to continuously perform actions
 	turns := 0
 
